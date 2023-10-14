@@ -18,6 +18,7 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int print_unsigned(va_list args);
 int print_oct(va_list val);
+int print_hex(va_list val);
 
 
 #endif
