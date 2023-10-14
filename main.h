@@ -32,5 +32,24 @@ int print_pointer(va_list val);
 int print_hex_extra(unsigned long int num);
 int print_revs(va_list val);
 int print_rot13(va_list val);
+int convert_and_print_binary(unsigned int num);
+int write_unsigned(unsigned int num);
+int write_octal(unsigned int num);
+int write_hexadecimal(unsigned int num);
+int write_hexadecimal_uppercase(unsigned int num);
+
+int print_long_int(va_list args);
+int print_long_unsigned(va_list args);
+int print_long_oct(va_list val);
+int print_long_hex(va_list val);
+int print_long_HEX(va_list val);
+ 
+
+int print_short_int(va_list args);
+int print_short_unsigned(va_list args);
+int print_short_oct(va_list val);
+int print_short_hex(va_list val);
+int print_short_HEX(va_list val);
+
 
 #endif
