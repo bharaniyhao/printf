@@ -1,25 +1,29 @@
 #include "main.h"
-
 /**
- * print_string - Handles the 's' conversion specifier.
- * @args: Argument list containing the string to print.
- *
- * Return: The number of characters printed.
+ * printf_string - print a string.
+ * @val: argumen t.
+ * Return: the length of the string.
  */
-int print_string(va_list args)
+
+int printf_string(va_list val)
 {
-    char *str = va_arg(args, char *);
-    int i;
+	char *str;
+	int i, len;
 
-    if (str == NULL)
-    {
-        write(1, "(null)", 6);
-        return (6);
-    }
-
-    for (i = 0; str[i]; i++)
-        _putchar(str[i]);
-
-    return (i);
+	str = va_arg(val, char *);
+	if (s == NULL)
+	{
+		str = "(null)";
+		len = _strlen(str);
+		for (i = 0; i < len; i++)
+			_putchar(str[i]);
+		return (len);
+	}
+	else
+	{
+		len = _strlen(str);
+		for (i = 0; i < len; i++)
+			_putchar(str[i]);
+		return (len);
+	}
 }
-
