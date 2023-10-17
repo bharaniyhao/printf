@@ -1,15 +1,15 @@
 #include "main.h"
 /**
-* print_int - function that prints an integer
-* @i: integer to print
+* print_dec - function that prints an decimal
+* @d: integer to print
 * Descriptions: prints digit with _putchar
 * Return: size the output text
 */
-int print_int(va_list i)
+int print_dec(va_list d)
 {
 	int len, powten, a, digits, nu, count = 0, num;
 
-	nu = va_arg(i, int);
+	nu = va_arg(dec, int);
 	if (nu != 0)
 	{
 		if (nu < 0)

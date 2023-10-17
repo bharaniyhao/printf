@@ -1,17 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdio.h>
-#include <stdarg.h>
-#include <string.h>
-#include <unistd.h>
-
-typedef struct format
-{
-        char *id;
-        int (*f)();
-} match;
-
 int print_3(void);
 int print_int(va_list args);
 int print_dec(va_list args);
@@ -22,34 +11,8 @@ int _strlenc(const char *str);
 int printf_char(va_list val);
 int _putchar(char c);
 int _printf(const char *format, ...);
-int print_unsigned(va_list args);
-int print_oct(va_list val);
-int print_hex(va_list val);
-int print_HEX(va_list val);
-int print_exc_string(va_list val);
-int print_HEX_extra(unsigned int num);
-int print_pointer(va_list val);
-int print_hex_extra(unsigned long int num);
-int print_revs(va_list val);
-int print_rot13(va_list val);
-int convert_and_print_binary(unsigned int num);
-int write_unsigned(unsigned int num);
-int write_octal(unsigned int num);
-int write_hexadecimal(unsigned int num);
-int write_hexadecimal_uppercase(unsigned int num);
-
-int print_long_int(va_list args);
-int print_long_unsigned(va_list args);
-int print_long_oct(va_list val);
-int print_long_hex(va_list val);
-int print_long_HEX(va_list val);
- 
-
-int print_short_int(va_list args);
-int print_short_unsigned(va_list args);
-int print_short_oct(va_list val);
-int print_short_hex(va_list val);
-int print_short_HEX(va_list val);
-
-
+int printf_rev(va_list str);
+int print_rot13(va_list R);
+int print_int(va_list i);
+int get_width(const char *format, int *i, va_list w)
 #endif
