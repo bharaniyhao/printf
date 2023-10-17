@@ -1,16 +1,15 @@
 #include "main.h"
 
 /**
- * print_char - Handles the 'c' conversion specifier.
- * @args: Argument list containing the character to print.
- *
- * Return: The number of characters printed.
+ * printf_char - prints a char.
+ * @value: arguments.
+ * Return: 1.
  */
-int print_char(va_list args)
+int printf_char(va_list value)
 {
-    char c = va_arg(args, int);
+	char ch;
 
-    _putchar(c);
-    return (1);
+	Ch = va_arg(value, int);
+	_putchar(ch);
+	return (1);
 }
-
