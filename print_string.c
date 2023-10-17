@@ -1,25 +1,24 @@
 #include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * print_string - Handles the 's' conversion specifier.
- * @args: Argument list containing the string to print.
+ * print_string - writes the character c to stdout
+ * @s: The string to print
  *
- * Return: The number of characters printed.
+ * Return: 1.
  */
-int print_string(va_list args)
+int print_string(va_list s)
 {
-    char *str = va_arg(args, char *);
-    int i;
+	char *my_strings;
+	int  is = 0;
 
-    if (str == NULL)
-    {
-        write(1, "(null)", 6);
-        return (6);
-    }
-
-    for (i = 0; str[i]; i++)
-        _putchar(str[i]);
-
-    return (i);
+	my_strings = va_arg(s, char *);
+	if (my_strings == NULL)
+		my_strings = "(null)";
+	while (my_strings[is])
+	{
+		_putchar(my_strings[is]);
+		is++;
+	}
+	return (is);
 }
-

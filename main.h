@@ -1,18 +1,30 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-int print_3(void);
-int print_int(va_list args);
-int print_dec(va_list args);
-int print_bin(va_list val);
-int printf_string(va_list val);
-int _strlen(char *str);
-int _strlenc(const char *str);
-int printf_char(va_list val);
+#include <stdarg.h>
 int _putchar(char c);
 int _printf(const char *format, ...);
-int printf_rev(va_list str);
-int print_rot13(va_list R);
+int print_char(va_list c);
+int print_string(va_list s);
 int print_int(va_list i);
-int get_width(const char *format, int *i, va_list w)
-#endif
+int print_dec(va_list d);
+int print_rev(va_list r);
+int print_bin(va_list b);
+int print_unsig(va_list u);
+int print_octal(va_list o);
+int print_x(va_list x);
+int print_X(va_list X);
+int print_rot13(va_list R);
+/**
+  * struct code_format - Struct format
+  *
+  * @sc: The specifiers
+  * @f: The function associated
+  */
+typedef struct code_format
+{
+	char *sc;
+	int (*f)(va_list);
+} code_f;
+
+#endif /*MAIN.H */
