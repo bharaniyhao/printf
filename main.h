@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+void print_buffer(char buffer[], int *buff_ind);
 int print_3(void);
 int print_int(va_list args);
 int print_dec(va_list args);
